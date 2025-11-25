@@ -1,0 +1,326 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Privacy & Security - C4N</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
+            background-color: #09090b;
+            color: #d4d4d8;
+            line-height: 1.7;
+        }
+
+        .container {
+            max-width: 800px;
+            margin: 0 auto;
+            padding: 3rem 1.5rem;
+        }
+
+        header {
+            text-align: center;
+            margin-bottom: 4rem;
+            padding-bottom: 2rem;
+            border-bottom: 1px solid #27272a;
+        }
+
+        .logo {
+            font-size: 3rem;
+            margin-bottom: 1rem;
+        }
+
+        h1 {
+            font-size: 2.5rem;
+            color: #fafafa;
+            margin-bottom: 1rem;
+            font-weight: 700;
+        }
+
+        .subtitle {
+            font-size: 1.125rem;
+            color: #10b981;
+            font-weight: 500;
+            text-transform: uppercase;
+            letter-spacing: 0.1em;
+        }
+
+        .section {
+            background: #18181b;
+            border: 1px solid #27272a;
+            border-radius: 1rem;
+            padding: 2.5rem;
+            margin-bottom: 2rem;
+        }
+
+        h2 {
+            font-size: 1.75rem;
+            color: #fafafa;
+            margin-bottom: 1.5rem;
+            font-weight: 600;
+        }
+
+        h3 {
+            font-size: 1.25rem;
+            color: #10b981;
+            margin-top: 2rem;
+            margin-bottom: 1rem;
+            font-weight: 600;
+        }
+
+        p {
+            margin-bottom: 1rem;
+            color: #a1a1aa;
+        }
+
+        ul {
+            list-style: none;
+            margin: 1.5rem 0;
+        }
+
+        ul li {
+            position: relative;
+            padding-left: 2rem;
+            margin-bottom: 1rem;
+            color: #d4d4d8;
+        }
+
+        ul li:before {
+            content: "✓";
+            position: absolute;
+            left: 0;
+            color: #10b981;
+            font-weight: bold;
+            font-size: 1.25rem;
+        }
+
+        .highlight-box {
+            background: #0d9488;
+            background: linear-gradient(135deg, #0d9488 0%, #10b981 100%);
+            color: #fff;
+            padding: 2rem;
+            border-radius: 0.75rem;
+            margin: 2rem 0;
+            font-weight: 500;
+        }
+
+        .highlight-box strong {
+            font-size: 1.25rem;
+            display: block;
+            margin-bottom: 0.5rem;
+        }
+
+        .back-link {
+            display: inline-flex;
+            align-items: center;
+            gap: 0.5rem;
+            color: #10b981;
+            text-decoration: none;
+            font-weight: 600;
+            margin-top: 3rem;
+            padding: 0.75rem 1.5rem;
+            border: 1px solid #10b981;
+            border-radius: 0.5rem;
+            transition: all 0.2s;
+        }
+
+        .back-link:hover {
+            background: #10b981;
+            color: #09090b;
+        }
+
+        code {
+            background: #27272a;
+            padding: 0.25rem 0.5rem;
+            border-radius: 0.25rem;
+            font-family: "Courier New", monospace;
+            color: #10b981;
+            font-size: 0.9em;
+        }
+
+        .tech-detail {
+            background: #27272a;
+            border-left: 3px solid #10b981;
+            padding: 1rem 1.5rem;
+            margin: 1rem 0;
+            border-radius: 0.5rem;
+        }
+
+        @media (max-width: 640px) {
+            .container {
+                padding: 2rem 1rem;
+            }
+
+            h1 {
+                font-size: 2rem;
+            }
+
+            .section {
+                padding: 1.5rem;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <header>
+            <div class="logo">🔒</div>
+            <h1>Privacy & Security</h1>
+            <p class="subtitle">100% Local, 100% Private</p>
+        </header>
+
+        <div class="highlight-box">
+            <strong>Your Data Never Leaves Your Device</strong>
+            <p style="margin: 0; color: rgba(255,255,255,0.95);">
+                Everything you mark, every note you write, and all your interactions stay completely private on your device.
+                We cannot see your data, access your data, or share your data—because we never receive it.
+            </p>
+        </div>
+
+        <div class="section">
+            <h2>How Your Data is Stored</h2>
+
+            <p>
+                C4N uses modern web technologies to ensure your information remains completely private and secure on your own device.
+            </p>
+
+            <h3>IndexedDB (Local Database)</h3>
+            <ul>
+                <li><strong>What it is:</strong> A browser-based database that stores data directly on your device</li>
+                <li><strong>Where it's stored:</strong> In your browser's secure storage area on your computer or phone</li>
+                <li><strong>Who can access it:</strong> Only you, through this application</li>
+                <li><strong>Capacity:</strong> Can store megabytes of data without performance issues</li>
+            </ul>
+
+            <div class="tech-detail">
+                <strong>Technical Detail:</strong> IndexedDB is a W3C standard supported by all modern browsers. It provides structured, indexed storage that's faster and more capable than cookies or localStorage.
+            </div>
+
+            <h3>What Gets Stored Locally</h3>
+            <ul>
+                <li>Your checkbox selections (items you've marked as experienced)</li>
+                <li>Personal notes you've added to behavior items</li>
+                <li>The behavior patterns database (downloaded once, cached for speed)</li>
+                <li>Your preferences and settings</li>
+            </ul>
+        </div>
+
+        <div class="section">
+            <h2>Zero Server Communication</h2>
+
+            <p>
+                Your personal interactions with this application do <strong>not</strong> communicate with any server. Here's exactly what does and doesn't get sent:
+            </p>
+
+            <h3>✅ What Gets Sent to Servers</h3>
+            <ul>
+                <li><strong>Initial page load:</strong> The application files (HTML, JavaScript, CSS)</li>
+                <li><strong>Database update check:</strong> A tiny request to check if content has been updated (no personal data)</li>
+                <li><strong>Text-to-speech (optional):</strong> Only when you click "Listen," the text is sent to generate audio</li>
+            </ul>
+
+            <h3>❌ What NEVER Gets Sent</h3>
+            <ul>
+                <li>Your checkbox selections</li>
+                <li>Your personal notes</li>
+                <li>Which pages you visit</li>
+                <li>How long you spend on the app</li>
+                <li>Any personally identifying information</li>
+            </ul>
+        </div>
+
+        <div class="section">
+            <h2>Technical Security Measures</h2>
+
+            <h3>HTTPS Encryption</h3>
+            <p>
+                All communication between your browser and our server uses HTTPS encryption, ensuring that even the minimal data transferred (like loading the application) is secure.
+            </p>
+
+            <h3>No Tracking or Analytics</h3>
+            <p>
+                Unlike most websites, C4N does not use:
+            </p>
+            <ul>
+                <li>Google Analytics or any analytics platform</li>
+                <li>Tracking cookies</li>
+                <li>Social media pixels</li>
+                <li>Third-party scripts (except the text-to-speech API, only when you request it)</li>
+            </ul>
+
+            <h3>No User Accounts</h3>
+            <p>
+                There are no accounts, logins, passwords, or user profiles. This means:
+            </p>
+            <ul>
+                <li>No email addresses collected</li>
+                <li>No password to forget or be compromised</li>
+                <li>No profile information stored anywhere</li>
+                <li>Complete anonymity</li>
+            </ul>
+        </div>
+
+        <div class="section">
+            <h2>Clearing Your Data</h2>
+
+            <p>
+                Since all data is stored locally in your browser, you have complete control:
+            </p>
+
+            <h3>Export Your Data First (Optional)</h3>
+            <p>
+                Use the "Export Data" button in the sidebar to save a JSON file of your selections and notes before clearing.
+            </p>
+
+            <h3>Clear Browser Data</h3>
+            <ul>
+                <li><strong>Chrome/Edge:</strong> Settings → Privacy and Security → Clear browsing data → Check "Cookies and site data"</li>
+                <li><strong>Firefox:</strong> Settings → Privacy & Security → Clear Data → Check "Cookies and Site Data"</li>
+                <li><strong>Safari:</strong> Settings → Safari → Clear History and Website Data</li>
+            </ul>
+
+            <div class="tech-detail">
+                <strong>Important:</strong> Clearing browser data will remove ALL data from C4N on that device. This cannot be undone unless you've exported your data first.
+            </div>
+        </div>
+
+        <div class="section">
+            <h2>Offline Capability</h2>
+
+            <p>
+                Once loaded, C4N works completely offline. Your browser caches the application files, meaning:
+            </p>
+            <ul>
+                <li>You can use it without an internet connection</li>
+                <li>Your data never risks being transmitted even if connected</li>
+                <li>Faster performance since everything loads from your device</li>
+            </ul>
+        </div>
+
+        <div class="section">
+            <h2>Questions or Concerns?</h2>
+
+            <p>
+                If you have questions about how your data is handled, or if you'd like more technical details about the implementation, please reach out through the support channels provided on the home page.
+            </p>
+
+            <p>
+                <strong>Remember:</strong> Your privacy and safety are paramount. This application was designed specifically to ensure that your sensitive information remains under your complete control at all times.
+            </p>
+        </div>
+
+        <a href="/" class="back-link">
+            <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                <path d="M19 12H5M12 19l-7-7 7-7"/>
+            </svg>
+            Back to Application
+        </a>
+    </div>
+</body>
+</html>
