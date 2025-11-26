@@ -4,9 +4,9 @@ header('Access-Control-Allow-Origin: *');
 
 // Database credentials
 $host = 'localhost';
-$username = 'cp';
-$password = '4334.4334';
-$database = 'my_media';
+$username = '';
+$password = '';
+$database = '';
 
 try {
     // Connect to database
