@@ -6,9 +6,9 @@ header('Access-Control-Allow-Headers: Content-Type');
 
 // Database credentials
 $host = 'localhost';
-$username = 'cp';
-$password = '4334.4334';
-$database = 'my_media';
+$username = '';
+$password = '';
+$database = '';
 
 // Get client IP
 function getClientIP() {
